@@ -18,13 +18,16 @@ export default class App extends React.Component {
         if (!this.state.placeName.trim()) return
         this.setState(prevState => ({
             placeName: '',
-            places: prevState.places.concat(prevState.placeName.trim())
+            places: prevState.places.concat({
+                key: Math.random().toString(),
+                value: prevState.placeName.trim()
+            })
         }))
     }
 
-    onPlaceDelete = (index) => {
+    onPlaceDelete = (key) => {
         this.setState(prevState => ({
-            places: prevState.places.filter((place, i) => i !== index)
+            places: prevState.places.filter(place => place.key !== key)
         }))
     }
 
