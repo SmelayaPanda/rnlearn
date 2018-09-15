@@ -1,5 +1,5 @@
-import React from 'react';
-import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
+import React from 'react'
+import {Button, StyleSheet, Text, TextInput, View} from 'react-native'
 
 export default class App extends React.Component {
     state = {
@@ -8,7 +8,7 @@ export default class App extends React.Component {
     }
 
     onPlaceNameChange = val => {
-        this.setState({placeName: val});
+        this.setState({placeName: val})
     }
 
     placeSubmit = () => {
@@ -16,7 +16,7 @@ export default class App extends React.Component {
         this.setState(prevState => ({
             placeName: '',
             places: prevState.places.concat(prevState.placeName.trim())
-        }));
+        }))
 
     }
 
@@ -41,7 +41,7 @@ export default class App extends React.Component {
                     })}
                 </View>
             </View>
-        );
+        )
     }
 }
 
@@ -65,4 +65,4 @@ const styles = StyleSheet.create({
     placeBtn: {
         width: '30%'
     }
-});
+})
