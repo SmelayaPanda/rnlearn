@@ -20,7 +20,12 @@ export default class App extends React.Component {
             placeName: '',
             places: prevState.places.concat(prevState.placeName.trim())
         }))
+    }
 
+    onPlaceDelete = (index) => {
+        this.setState(prevState => ({
+            places: prevState.places.filter((place, i) => i !== index)
+        }))
     }
 
     render() {
@@ -32,7 +37,10 @@ export default class App extends React.Component {
                     onPlaceChange={this.onPlaceNameChange}
                     onPlaceSubmit={this.onPlaceSubmit}
                 />
-                <PlacesList places={this.state.places}/>
+                <PlacesList
+                    onItemDeleted={this.onPlaceDelete}
+                    places={this.state.places}
+                />
             </View>
         )
     }

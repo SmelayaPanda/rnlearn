@@ -6,7 +6,10 @@ const placesList = props => {
     return (
         <View style={styles.listContainer}>
             {props.places.map((place, i) => {
-                return <ListItem key={i} placeName={place} onItemPressed={() => alert('Item pressed ID: ' + i)}/>
+                return <ListItem
+                    key={i}
+                    placeName={place}
+                    onItemPressed={() => props.onItemDeleted(i)}/>
             })}
         </View>
     )
