@@ -1,13 +1,19 @@
-import React, {Component} from 'react'
+import React from 'react'
+import {StyleSheet, Text, View} from 'react-native'
 
-class ListItem extends Component {
-    render() {
-        return (
-            <div>
+const listItem = props => (
+    <View style={styles.listItem}>
+        <Text>{props.placeName}</Text>
+    </View>
+)
 
-            </div>
-        )
+const styles = StyleSheet.create({
+    listItem: {
+        width: '100%',
+        marginBottom: 5,
+        padding: 10,
+        backgroundColor: '#eee'
     }
-}
+})
 
-export default ListItem
+export default listItem
