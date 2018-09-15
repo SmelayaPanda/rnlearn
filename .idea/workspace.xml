@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48630571-d43a-4280-94f3-e36f775814be" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/PlaceInput/PlaceInput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/PlacesList/PlacesList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/ListItem/ListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/PlacesList/PlaceItem/PlaceItem.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,15 +29,15 @@
         <counts>
           <entry key="eslintrc" value="5" />
           <entry key="gitignore" value="14" />
-          <entry key="js" value="1069" />
-          <entry key="txt" value="36" />
+          <entry key="js" value="1201" />
+          <entry key="txt" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="1069" />
-          <entry key="PLAIN_TEXT" value="50" />
+          <entry key="JavaScript" value="1201" />
+          <entry key="PLAIN_TEXT" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -41,7 +45,7 @@
           <entry key="babelrc" value="1" />
           <entry key="eslintrc" value="9" />
           <entry key="gitignore" value="1" />
-          <entry key="js" value="24" />
+          <entry key="js" value="50" />
           <entry key="json" value="8" />
           <entry key="lock" value="3" />
         </counts>
@@ -49,7 +53,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="18" />
-          <entry key="JavaScript" value="24" />
+          <entry key="JavaScript" value="50" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="yarn.lock" value="3" />
         </counts>
@@ -64,10 +68,13 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="612">
+              <caret line="31" column="33" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,9 +95,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.eslintrc" />
-        <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/src/component/ListItem/ListItem.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/component/ListItems/ListItems.js" />
+        <option value="$PROJECT_DIR$/src/component/PlaceInput/PlaceInput.js" />
+        <option value="$PROJECT_DIR$/App.js" />
+        <option value="$PROJECT_DIR$/src/component/PlacesList/PlacesList.js" />
+        <option value="$PROJECT_DIR$/src/component/PlacesList/PlaceItem/PlaceItem.js" />
       </list>
     </option>
   </component>
@@ -145,7 +156,15 @@
               <item name="rnlearn" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="ListItem" type="462c0819:PsiDirectoryNode" />
+              <item name="PlacesList" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rnlearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rnlearn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="PlacesList" type="462c0819:PsiDirectoryNode" />
+              <item name="PlaceItem" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -166,6 +185,11 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/component/ListItems" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -189,7 +213,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537020563543</updated>
-      <workItem from="1537020566753" duration="5151000" />
+      <workItem from="1537020566753" duration="6204000" />
     </task>
     <task id="LOCAL-00001" summary="input and bnt">
       <created>1537026405302</created>
@@ -212,11 +236,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537028787718</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="git ignore">
+      <created>1537029090115</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1537029090115</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5151000" />
+    <option name="totallyTimeSpent" value="6204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -230,7 +261,7 @@
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="RNConsole" />
-      <window_info anchor="bottom" id="Terminal" weight="0.18065268" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.35314685" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -255,7 +286,8 @@
     <MESSAGE value="input and bnt" />
     <MESSAGE value="lint" />
     <MESSAGE value="list items" />
-    <option name="LAST_COMMIT_MESSAGE" value="list items" />
+    <MESSAGE value="git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="git ignore" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.babelrc">
@@ -271,23 +303,6 @@
     <entry file="file://$PROJECT_DIR$/yarn.lock">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/ListItem/ListItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -300,8 +315,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="494">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/PlaceInput/PlaceInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/PlacesList/PlaceItem/PlaceItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/PlacesList/PlacesList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

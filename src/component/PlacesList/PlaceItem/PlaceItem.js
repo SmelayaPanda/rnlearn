@@ -1,7 +1,7 @@
 import React from 'react'
 import {StyleSheet, Text, View} from 'react-native'
 
-const listItem = props => (
+const placeItem = props => (
     <View style={styles.listItem}>
         <Text>{props.placeName}</Text>
     </View>
@@ -16,4 +16,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default listItem
+export default placeItem

@@ -1,7 +1,8 @@
 import React from 'react'
-import {Button, StyleSheet, Text, TextInput, View} from 'react-native'
+import {StyleSheet, Text, View} from 'react-native'
 
-import ListItem from './src/component/ListItem/ListItem'
+import PlacesList from './src/component/PlacesList/PlacesList'
+import PlaceInput from './src/component/PlaceInput/PlaceInput'
 
 export default class App extends React.Component {
     state = {
@@ -13,7 +14,7 @@ export default class App extends React.Component {
         this.setState({placeName: val})
     }
 
-    placeSubmit = () => {
+    onPlaceSubmit = () => {
         if (!this.state.placeName.trim()) return
         this.setState(prevState => ({
             placeName: '',
@@ -26,22 +27,12 @@ export default class App extends React.Component {
         return (
             <View style={styles.container}>
                 <Text>Hello Panda!</Text>
-                <View style={styles.inputContainer}>
-                    <TextInput
-                        style={styles.placeInput}
-                        placeholder={'An awesome place'}
-                        value={this.state.placeName}
-                        onChangeText={this.onPlaceNameChange}/>
-                    <Button
-                        style={styles.placeBtn}
-                        title={'Add'}
-                        onPress={this.placeSubmit}/>
-                </View>
-                <View style={styles.listContainer}>
-                    {this.state.places.map((place, i) => {
-                        return <ListItem key={i} placeName={place}/>
-                    })}
-                </View>
+                <PlaceInput
+                    placeName={this.state.placeName}
+                    onPlaceChange={this.onPlaceNameChange}
+                    onPlaceSubmit={this.onPlaceSubmit}
+                />
+                <PlacesList places={this.state.places}/>
             </View>
         )
     }
@@ -66,8 +57,5 @@ const styles = StyleSheet.create({
     },
     placeBtn: {
         width: '30%'
-    },
-    listContainer: {
-        width: '100%'
     }
 })
