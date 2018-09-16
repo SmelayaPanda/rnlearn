@@ -5,9 +5,9 @@
 
 # dependencies
 /node_modules
-/android
-/ios
-.idea
+/android/
+/ios/
+.idea/
 
 # misc
 .env.local

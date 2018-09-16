@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import PlaceItem from './PlaceItem/PlaceItem'
 import {FlatList, StyleSheet} from 'react-native'
 
@@ -9,7 +10,8 @@ const placesList = props => {
             data={props.places}
             renderItem={(info) => (
                 <PlaceItem
-                    placeName={info.item.value}
+                    placeName={info.item.name}
+                    placeImage={info.item.image}
                     onItemPressed={() => props.onItemDeleted(info.item.key)}
                 />
             )}
@@ -22,5 +24,10 @@ const styles = StyleSheet.create({
         width: '100%'
     }
 })
+
+placesList.propTypes = {
+    places: PropTypes.array.isRequired,
+    onItemDeleted: PropTypes.func.isRequired
+}
 
 export default placesList

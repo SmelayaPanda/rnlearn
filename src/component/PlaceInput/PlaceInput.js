@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {Button, StyleSheet, TextInput, View} from 'react-native'
 
 const placeInput = props => {
@@ -32,5 +33,11 @@ const styles = StyleSheet.create({
         width: '30%'
     }
 })
+
+placeInput.propTypes = {
+    onPlaceSubmit: PropTypes.func.isRequired,
+    onPlaceChange: PropTypes.func.isRequired,
+    placeName: PropTypes.string.isRequired,
+}
 
 export default placeInput
