@@ -12,7 +12,7 @@ const placesList = props => {
                 <PlaceItem
                     placeName={info.item.name}
                     placeImage={info.item.image}
-                    onItemPressed={() => props.onItemDeleted(info.item.key)}
+                    onItemPressed={() => props.onItemSelected(info.item.key)}
                 />
             )}
         />
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 
 placesList.propTypes = {
     places: PropTypes.array.isRequired,
-    onItemDeleted: PropTypes.func.isRequired
+    onItemSelected: PropTypes.func.isRequired
 }
 
 export default placesList

@@ -3,12 +3,13 @@ import {StyleSheet, Text, View} from 'react-native'
 
 import PlacesList from './src/component/PlacesList/PlacesList'
 import PlaceInput from './src/component/PlaceInput/PlaceInput'
-import tailand1 from './src/assets/tailand.jpg'
+import PlaceDetail from './src/component/PlaceDetail/PlaceDetail'
 
 export default class App extends React.Component {
     state = {
         placeName: '',
-        places: []
+        places: [],
+        selectedPlace: null
     }
 
     onPlaceNameChange = val => {
@@ -22,28 +23,44 @@ export default class App extends React.Component {
             places: prevState.places.concat({
                 key: Math.random().toString(),
                 name: prevState.placeName.trim(),
-                image: tailand1
+                image:  'https://www.votpusk.ru/country/cnimages/new/thailand.jpg'
             })
         }))
     }
 
-    onPlaceDelete = (key) => {
+    onPlaceSelected = (key) => {
         this.setState(prevState => ({
-            places: prevState.places.filter(place => place.key !== key)
+            selectedPlace: prevState.places.find(place => place.key === key)
         }))
+    }
+
+    onPlaceDelete = () => {
+        this.setState(prevState => ({
+            places: prevState.places.filter(place => place.key !== prevState.selectedPlace.key),
+            selectedPlace: null
+        }))
+    }
+
+    onModalClose = () => {
+        this.setState({selectedPlace: null})
     }
 
     render() {
         return (
             <View style={styles.container}>
                 <Text>Hello Panda!</Text>
+                <PlaceDetail
+                    selectedPlace={this.state.selectedPlace}
+                    onItemDeleted={this.onPlaceDelete}
+                    onModalClose={this.onModalClose}
+                />
                 <PlaceInput
                     placeName={this.state.placeName}
                     onPlaceChange={this.onPlaceNameChange}
                     onPlaceSubmit={this.onPlaceSubmit}
                 />
                 <PlacesList
-                    onItemDeleted={this.onPlaceDelete}
+                    onItemSelected={this.onPlaceSelected}
                     places={this.state.places}
                 />
             </View>

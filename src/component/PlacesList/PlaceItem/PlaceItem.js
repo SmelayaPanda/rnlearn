@@ -6,11 +6,10 @@ const placeItem = props => (
     <TouchableOpacity onPress={props.onItemPressed}>
         <View style={styles.listItem}>
             <Image
-                source={props.placeImage}
+                source={{uri: props.placeImage}}
                 resizeMode={'cover'}
                 style={styles.placeImage}/>
             <Text>{props.placeName}</Text>
-            <Text>{props.placeImage}</Text>
         </View>
     </TouchableOpacity>
 )
@@ -34,7 +33,7 @@ const styles = StyleSheet.create({
 
 placeItem.propTypes = {
     onItemPressed: PropTypes.func.isRequired,
-    placeImage: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+    placeImage: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.string]),
     placeName: PropTypes.string.isRequired,
 }
 
